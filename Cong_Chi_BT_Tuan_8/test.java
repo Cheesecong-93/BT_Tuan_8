@@ -13,6 +13,9 @@ public class test {
             System.out.println("3. Hien thi danh sach sach");
             System.out.println("4. Tim sach theo ma");
             System.out.println("5. Xoa sach theo ma");
+            System.out.println("6. Cap nhat thong tin sach");
+            System.out.println("7. Thong ke tong so sach va gia tri kho");
+            System.out.println("8. Sap xep sach theo gia ban");
             System.out.println("0. Thoat");
             System.out.print("Nhap lua chon: ");
             chon = Integer.parseInt(sc.nextLine());
@@ -78,6 +81,25 @@ public class test {
                     System.out.print("Nhap ma sach can xoa: ");
                     ma = sc.nextLine();
                     ql.xoaSach(ma);
+                    break;
+
+                case 6:
+                    System.out.print("Nhap ma sach can cap nhat: ");
+                    ma = sc.nextLine();
+                    System.out.print("Nhap gia moi: ");
+                    gia = Double.parseDouble(sc.nextLine());
+                    System.out.print("Nhap so luong moi: ");
+                    sl = Integer.parseInt(sc.nextLine());
+                    ql.capNhatSach(ma, gia, sl);
+                    break;
+
+                case 7:
+                    ql.thongKe();
+                    break;
+
+                case 8:
+                    ql.sapXepTheoGia();
+                    ql.hienThiDanhSach();
                     break;
 
                 case 0:
